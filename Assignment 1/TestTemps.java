@@ -21,12 +21,26 @@ public class TestTemps {
 
         DailyTemps dt = new DailyTemps(temps);
 
-        System.out.println("Testing method setTemp: ");
+        System.out.println("\n\nTesting method setTemp: ");
         System.out.print("Enter index value for the day: ");
         int index = s.nextInt();
         System.out.print("Enter temperature value: ");
         int temp = s.nextInt();
         dt.setTemp(index, temp);
+
+        System.out.println("\n\nTesting method Freezing: ");
+        int freezeCount = dt.Freezing();
+        System.out.println("Number of freezing days is " + freezeCount + " days");
+
+
+        System.out.println("\n\nTesting method Warmest: ");
+        String warmestDay = dt.Warmest();
+        System.out.println("The warmest day of the week is " + warmestDay);
+
+        System.out.println("\n\nTesting method printTemps: ");
+        System.out.println(dt.printTemps());
+
+        s.close();
     }
     
 

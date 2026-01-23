@@ -19,7 +19,7 @@ public class DailyTemps {
     public int Freezing(){
         int freezeCount = 0;
         for(int i = 0; i < 7; i++){
-            if(temps[i] > 32)
+            if(temps[i] < 32)
                 freezeCount++;
         }
         return freezeCount;
@@ -34,24 +34,16 @@ public class DailyTemps {
                 warmestDay = i;
             }
         }
-        switch(warmestDay){
-            case 0:
-                return "Monday";
-            case 1:
-                return "Tuesday";
-            case 2:
-                return "Wednesday";
-            case 3:
-                return "Thursday";
-            case 4:
-                return "Friday";
-            case 5:
-                return "Saturday";
-            case 6:
-                return "Sunday";
-            default:
-                return null;
-        }
+        return switch (warmestDay) {
+            case 0 -> "Monday";
+            case 1 -> "Tuesday";
+            case 2 -> "Wednesday";
+            case 3 -> "Thursday";
+            case 4 -> "Friday";
+            case 5 -> "Saturday";
+            case 6 -> "Sunday";
+            default -> null;
+        };
     }
     
     public String printTemps(){

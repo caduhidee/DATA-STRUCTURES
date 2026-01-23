@@ -21,7 +21,7 @@ public class TestRectangle {
     Rectangle yourRectangle = new Rectangle(width, height);
 
 
-    System.out.println("myRectangle:");
+    System.out.println("\nmyRectangle:");
     System.out.println("--------------");
     System.out.println("Width:       " + myRectangle.getWidth());
     System.out.println("Height:      " + myRectangle.getHeight());
@@ -38,11 +38,12 @@ public class TestRectangle {
     System.out.println("\n" + yourRectangle.printRectangle("yourRectangle") + "\n");
 
 
-    System.out.println("Testing method getWidth() on object myRectangle: " + myRectangle.getWidth());
-    System.out.println("Testing method getHeight() on object myRectangle: " + myRectangle.getHeight());
-    System.out.println("Testing method getArea() on object myRectangle: " + myRectangle.getArea());
+    System.out.println("Testing method getWidth() on object myRectangle:     " + myRectangle.getWidth());
+    System.out.println("Testing method getHeight() on object myRectangle:    " + myRectangle.getHeight());
+    System.out.println("Testing method getArea() on object myRectangle:      " + myRectangle.getArea());
     System.out.println("Testing method getPerimeter() on object myRectangle: " + myRectangle.getPerimeter());
 
+    s.close();
     }
 }
 
