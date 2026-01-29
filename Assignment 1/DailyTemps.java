@@ -8,14 +8,17 @@
 public class DailyTemps {
     int[] temps = new int[7];
 
+    //contructor
     public DailyTemps(int[] temps) {
         this.temps = temps;
     }
 
+    //sets temp value for a certain index
     public void setTemp(int index, int temp){
         temps[index] = temp;
     }
-
+    
+    //checks each value in temps and makes a count of those below freezing
     public int Freezing(){
         int freezeCount = 0;
         for(int i = 0; i < 7; i++){
@@ -25,6 +28,7 @@ public class DailyTemps {
         return freezeCount;
     }
 
+    //checks each value in temps and returns the warmest day based off of the index returned
     public String Warmest(){
         int warmestTemp = 0;
         int warmestDay = 0;
@@ -45,7 +49,7 @@ public class DailyTemps {
             default -> null;
         };
     }
-    
+    //prints each temp value
     public String printTemps(){
         return "Monday       " + temps[0] +
              "\nTuesday      " + temps[1] +
